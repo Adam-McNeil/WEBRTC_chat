@@ -7,11 +7,11 @@ const { v4: uuidV4} = require('uuid')
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
 
-app.get('/', (req, res) => {
-    res.redirect(`/${uuidV4()}`)
+app.get('https://adam-mcneil.github.io/WEBRTC_chat/', (req, res) => {
+    res.redirect(`https://adam-mcneil.github.io/WEBRTC_chat/${uuidV4()}`)
 })
 
-app.get('/:room', (req, res) => {
+app.get('https://adam-mcneil.github.io/WEBRTC_chat/:room', (req, res) => {
     res.render('room', { roomId: req.params.room })
 })
 
